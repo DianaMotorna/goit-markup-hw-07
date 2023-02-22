@@ -1,0 +1,8 @@
+ul {
+    list-style: none;
+}
+
+.link,
+.page-logo {
+    text-decoration: none;
+}
