@@ -11,50 +11,55 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <header class="page-header">
+    <header class="header">
       <nav class="nav">
-        <a class="page-logo" href="./index.html">WebStudio</a>
-        <ul>
-          <li><a class="link" href="./index.html">Studio</a></li>
-          <li><a class="link" href="./portfolio.html">Portfolio</a></li>
-          <li><a class="link" href="./contacts.html">Contacts</a></li>
+        <a class="logo" href="./index.html"
+          ><span class="first-part-logo">Web</span
+          ><span class="second-part-logo">Studio</span></a
+        >
+        <ul class="menu-list list">
+          <li class="menu-item">
+            <a class="menu-link link" href="./index.html">Studio</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link link" href="./contacts.html">Contacts</a>
+          </li>
         </ul>
       </nav>
-      <address>
-        <ul>
+      <address class="contacts">
+        <ul class="list">
           <li>
-            <a class="link" href="mailto:info@devstudio.com"
+            <a class="contact-mail link" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
           <li>
-            <a class="link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            <a class="contact-phone-number link" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
           </li>
         </ul>
       </address>
     </header>
 
     <main>
-      <section>
-        <h1>Effective Solutions for Your Business</h1>
-        <button type="button">Order Service</button>
+      <section class="hero">
+        <h1 class="heading">Effective Solutions for Your Business</h1>
+        <button class="modal-btn" type="button">Order Service</button>
       </section>
 
-      <section>
+      <section class="section">
         <h2 hidden>features</h2>
-        <ul>
+        <ul class="list">
           <li>
-            <h3>Strategy</h3>
+            <h3 class="section-title">Strategy</h3>
             <p>
               Our goal is to identify the business problem to walk away with the
               perfect and creative solution.
@@ -62,21 +67,21 @@
           </li>
 
           <li>
-            <h3>Punctuality</h3>
+            <h3 class="section-title">Punctuality</h3>
             <p>
               Bring the key message to the brand's audience for the best price
               within the shortest possible time.
             </p>
           </li>
           <li>
-            <h3>Diligence</h3>
+            <h3 class="section-title">Diligence</h3>
             <p>
               Research and confirm brands that present the strongest digital
               growth opportunities and minimize risk.
             </p>
           </li>
           <li>
-            <h3>Technologies</h3>
+            <h3 class="section-title">Technologies</h3>
             <p>
               Design practice focused on digital experiences. We bring forth a
               deep passion for problem-solving.
@@ -85,9 +90,9 @@
         </ul>
       </section>
 
-      <section>
-        <h2>What are we doing</h2>
-        <ul>
+      <section class="section">
+        <h2 class="section-head">What are we doing</h2>
+        <ul class="list">
           <li>
             <img
               src="./images/activity/computer.jpg"
@@ -115,56 +120,59 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Our Team</h2>
-        <ul>
-          <li>
+      <section class="section-team">
+        <h2 class="section-head">Our Team</h2>
+        <ul class="list">
+          <li class="team-item">
             <img
               src="./images/team/mark-guerrero.jpg"
               alt="Mark Guerrero"
               width="264"
               height="260"
             />
-            <h3>Mark Guerrero</h3>
+            <h3 class="section-title">Mark Guerrero</h3>
             <p>Product Designer</p>
           </li>
 
-          <li>
+          <li class="team-item">
             <img
               src="./images/team/tom-ford.jpg"
               alt="Tom Ford"
               width="264"
               height="260"
             />
-            <h3>Tom Ford</h3>
+            <h3 class="section-title">Tom Ford</h3>
             <p>Frontend Developer</p>
           </li>
-          <li>
+          <li class="team-item">
             <img
               src="./images/team/camila-garcia.jpg"
               alt="Camila Garcia"
               width="264"
               height="260"
             />
-            <h3>Camila Garcia</h3>
+            <h3 class="section-title">Camila Garcia</h3>
             <p>Marketing</p>
           </li>
-          <li>
+          <li class="team-item">
             <img
               src="./images/team/daniel-wilson.jpg"
               alt="Daniel Wilson"
               width="264"
               height="260"
             />
-            <h3>Daniel Wilson</h3>
+            <h3 class="section-title">Daniel Wilson</h3>
             <p>UI Designer</p>
           </li>
         </ul>
       </section>
     </main>
-    <footer>
-      <a class="page-logo" href="./index.html">WebStudio</a>
-      <p>
+    <footer class="footer">
+      <a class="logo" href="./index.html"
+        ><span class="first-part-logo">Web</span
+        ><span class="second-part-logo-footer">Studio</span></a
+      >
+      <p class="footer-text">
         Increase the flow of customers and sales for your business with digital
         marketing & growth solutions.
       </p>
