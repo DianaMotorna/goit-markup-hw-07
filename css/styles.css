@@ -9,10 +9,11 @@
   --light-color: #F4F4FD;
   --modal-overlay-color: rgba(46, 47, 66, 0.4);
   --hero-background-color: rgba(46, 47, 66, 0.7);
+  --primary-light-color: #fff;
 }
 
 body {
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: var(--text-color);
@@ -65,15 +66,21 @@ body {
     letter-spacing: 0.02em;
 }
 
-.link {
-    text-decoration: none;
+.menu-link {
+    color: var(--dark-color);
 }
 
-.link:focus,
-.link:hover
-.link:active,
-.link:visited {
+.menu-link:hover,
+.menu-link:focus,
+.contact-mail:hover,
+.contact-mail:focus,
+.contact-phone-number:hover,
+.contact-phone-number:focus {
     color: var(--pressed-state-color);
+}
+
+.link {
+    text-decoration: none;
 }
 
 .contacts {
@@ -93,18 +100,19 @@ body {
 }
 
 .heading {
-    color: #fff;
+    color: var(--light-color);
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
 }
 
 .modal-btn {
+    font-family: 'Roboto', sans-serif;
     background-color: var(--primary-brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
-    color: #fff;
+    color: var(--primary-light-color);
     cursor: pointer;
     font-weight: 500;
 }
@@ -157,6 +165,7 @@ body {
 /* Button */
 
 .btn {
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: var(--primary-brand-color);
     background-color: var(--light-color);
