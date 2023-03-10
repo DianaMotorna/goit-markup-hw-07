@@ -294,7 +294,6 @@ body {
     justify-content: center;
     gap: 24px;
     margin-bottom: 72px;
-    padding-top: 96px;
 }
 /* Button end */
 
@@ -324,6 +323,7 @@ body {
 }
 
 .section-portfolio {
+    padding-top: 96px;
     padding-bottom: 120px;
 }
 /* Main end */
