@@ -214,7 +214,7 @@ body {
 /* Photos */
 
 .section-doings {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
 }
 
 .doings-photo {
@@ -293,7 +293,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 24px;
-    padding: 96px 0 72px 0;
+    margin-bottom: 72px;
+    padding-top: 96px;
 }
 /* Button end */
 
@@ -323,7 +324,7 @@ body {
 }
 
 .section-portfolio {
-    margin-bottom: 120px;
+    padding-bottom: 120px;
 }
 /* Main end */
 /* =====Portfolio end===== */
