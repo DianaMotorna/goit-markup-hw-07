@@ -159,8 +159,8 @@ body {
 
  /* Hero */
 .hero {
-    background-color: var(--dark-color);
     padding: 188px 0;
+   background-color: var(--dark-color);
 }
 
 .heading {
