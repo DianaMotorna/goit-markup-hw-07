@@ -1,15 +1,15 @@
 :root {
-  --primary-brand-color: #4D5AE5;
-  --pressed-state-color: #404BBF;
-  --dark-color: #2E2F42;
-  --success-color: #31D0AA;
-  --text-color: #434455;
-  --subtle-text-color: #8E8F99;
-  --accent-color: #E7E9FC;
-  --light-color: #F4F4FD;
-  --modal-overlay-color: rgba(46, 47, 66, 0.4);
-  --hero-background-color: rgba(46, 47, 66, 0.7);
-  --primary-light-color: #fff;
+    --primary-brand-color: #4D5AE5;
+    --pressed-state-color: #404BBF;
+    --dark-color: #2E2F42;
+    --success-color: #31D0AA;
+    --text-color: #434455;
+    --subtle-text-color: #8E8F99;
+    --accent-color: #E7E9FC;
+    --light-color: #F4F4FD;
+    --modal-overlay-color: rgba(46, 47, 66, 0.4);
+    --hero-background-color: rgba(46, 47, 66, 0.7);
+    --primary-light-color: #fff;
 }
 
 h1,
@@ -76,7 +76,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 0;
+    /* padding: 22px 0; */
 }
 
 .nav {
@@ -86,6 +86,31 @@ body {
 
 .menu-list {
     display: flex;
+}
+
+.menu-link {
+    display: inline-block;
+    color: var(--dark-color);
+    position: relative;
+    padding: 22px 0;
+}
+
+.menu-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    background-color: var(--pressed-state-color);
+    border-radius: 2px;
+    transition-property: width;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover::after {
+    width: 100%;
 }
 
 .list {
@@ -120,11 +145,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-.menu-link {
-    color: var(--dark-color);
-    
-}
-
 .menu-item:not(:last-child) {
     margin-right: 40px;
 }
@@ -155,13 +175,14 @@ body {
     color: var(--text-color);
     font-style: normal;
 }
- /* Header end */
 
- /* Hero */
+/* Header end */
+
+/* Hero */
 .hero {
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+        url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -193,6 +214,9 @@ body {
     display: flex;
     margin: 0 auto;
     padding: 16px 32px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -200,7 +224,57 @@ body {
     background-color: var(--pressed-state-color);
 }
 
- /* Hero end */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: visible;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.is-hidden .modal {
+    transform: translate(-50%, 0) scale(0);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    height: 576px;
+    width: 408px;
+    background-color: var(--primary-light-color);
+    border-radius: 4px;
+}
+
+.close-button {
+    position: absolute;
+    padding: 0;
+    top: 24px;
+    right: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.close-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+/* Hero end */
 
 /* Features */
 .feature-icon {
@@ -228,6 +302,7 @@ body {
 .section {
     padding: 120px 0;
 }
+
 /* Features end */
 
 /* Photos */
@@ -239,6 +314,7 @@ body {
 .doings-photo {
     width: calc((100% - 2*24px) / 3);
 }
+
 /* Photos end*/
 
 /* Team */
@@ -258,13 +334,14 @@ body {
     padding: 32px 16px;
     text-align: center;
 }
- .member-icon-container {
+
+.member-icon-container {
     display: flex;
     justify-content: space-between;
     gap: 24px;
- }
+}
 
- .member-icon-box {
+.member-icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,21 +349,25 @@ body {
     height: 40px;
     border-radius: 50px;
     background-color: var(--primary-brand-color);
-    transition: background-color .2s ease-in-out;
- }
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .member-icon-box:hover,
 .member-icon-box:focus {
     background-color: var(--pressed-state-color);
 }
- .member-social-icon {
+
+.member-social-icon {
     width: 16px;
     height: 16px;
- }
+}
 
 .member-description p {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
+
 /* Team end */
 
 /* Customer */
@@ -298,35 +379,37 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 24px;
-
 }
 
-.customer-icon { 
+.customer-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 168px;
     height: 88px;
     border-radius: 4px;
-    border: 1px solid var(--subtle-text-color);  
+    border: 1px solid var(--subtle-text-color);
     fill: var(--subtle-text-color);
 }
-
 
 .customer-logo {
     width: 84px;
     height: 42px;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon:hover,
 .customer-icon:focus {
-   border-color: var(--pressed-state-color);
+    border-color: var(--pressed-state-color);
 }
 
 .customer-icon:hover svg,
 .customer-icon:focus svg {
     fill: var(--pressed-state-color);
- }
+}
+
 /* Customer end */
 
 /* Footer */
@@ -342,7 +425,7 @@ body {
 }
 
 .second-part-logo-footer {
-   color: var(--light-color);
+    color: var(--light-color);
 }
 
 .footer-text {
@@ -357,13 +440,14 @@ body {
     color: var(--primary-light-color);
     margin-bottom: 16px;
 }
+
 .footer-icon-container {
     display: flex;
     justify-content: space-between;
     gap: 24px;
- }
+}
 
- .footer-icon-box {
+.footer-icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -371,26 +455,30 @@ body {
     height: 40px;
     border-radius: 50px;
     background-color: var(--text-color);
- }
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
- .footer-icon-box:hover,
- .footer-icon-box:focus {
+.footer-icon-box:hover,
+.footer-icon-box:focus {
     background-color: var(--success-color);
- }
+}
 
- .footer-social-icon {
+.footer-social-icon {
     width: 20px;
     height: 24px;
     color: var(--light-color);
- }
+}
 
- .footer-wrapper {
+.footer-wrapper {
     display: flex;
- }
+}
 
- .footer-box {
+.footer-box {
     margin-right: 120px;
- }
+}
+
 /* Footer end */
 
 
@@ -409,6 +497,9 @@ body {
     border-radius: 4px;
     cursor: pointer;
     padding: 12px 24px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -424,17 +515,53 @@ body {
     gap: 24px;
     margin-bottom: 72px;
 }
+
 /* Button end */
 
 /* Main */
 
 .section-item {
+    position: relative;
     background: var(--primary-light-color);
     flex-basis: calc((100% - 48px) / 3);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-link {
+    display: block;
+    width: 360px;
+    background-color: var(--primary-light-color);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:is(:hover, :focus) .overlay {
+    transform: translateY(0);
+}
+
+.overlay {
+    position: absolute;
+    padding: 40px 32px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--light-color);
+    background-color: var(--primary-brand-color);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .figcaption {
@@ -458,5 +585,6 @@ body {
     padding-top: 96px;
     padding-bottom: 120px;
 }
+
 /* Main end */
 /* =====Portfolio end===== */
