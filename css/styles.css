@@ -95,23 +95,21 @@ body {
     padding: 22px 0;
 }
 
-.menu-link:after {
+.portfolio-link::after,
+.home-link::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 4px;
     left: 0;
     bottom: -1px;
     background-color: var(--pressed-state-color);
     border-radius: 2px;
-    transition-property: width;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-link:hover::after {
-    width: 100%;
-}
+.home-page .menu-link:after {
+
+} 
 
 .list {
     display: flex;
@@ -174,6 +172,9 @@ body {
 .contact-phone-number {
     color: var(--text-color);
     font-style: normal;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Header end */
@@ -390,14 +391,14 @@ body {
     border-radius: 4px;
     border: 1px solid var(--subtle-text-color);
     fill: var(--subtle-text-color);
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-logo {
     width: 84px;
     height: 42px;
-    transition-property: background-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon:hover,
